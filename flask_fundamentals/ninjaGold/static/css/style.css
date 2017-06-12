@@ -1,0 +1,16 @@
+h2 {
+  display: inline-block;
+  background-color: grey;
+
+
+}
+
+.header {
+  /*width: 50px;*/
+  /*display: inline-block;*/
+}
+
+.column {
+  display: inline-block;
+  width: 50px;
+}
