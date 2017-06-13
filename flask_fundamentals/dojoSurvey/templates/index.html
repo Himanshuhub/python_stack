@@ -4,9 +4,23 @@
     </head>
 <body>
     <h1>Enter Your Info</h1>
-    <form action='/process' method='post'>
-          Your Name: <input type='text' name='name'>
-          <!-- Email: <input type='text' name='email'> -->
+    <form action='/result' method='post'>
+          Your Name: <input type='text' name='name'> <br>
+          Dojo Location: <select name="location">
+            <option value="sanjose">San Jose</option>
+            <option value="seattle">Seattle</option>
+            <option value="chicago">Chicago</option>
+            <option value="la">LA</option>
+        </select><br>
+          Favorite Language: <select name="language">
+            <option value="python">Python</option>
+            <option value="java">Java</option>
+            <option value="javascript">Javascript</option>
+            <option value="swift">Swift</option>
+        </select><br>
+          Comment (optional): <input type='text' name='comment'><br>
           <input type='submit' value='create user'>
+      </form>
+
 </body>
 </html>
