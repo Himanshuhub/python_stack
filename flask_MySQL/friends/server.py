@@ -38,6 +38,14 @@ def index():
 #     # so we pass the value at [0] to our template under alias one_friend.
 #     return render_template('index.html', one_friend=friends[0])
 
+# @app.route('/friends', methods=['POST'])
+# def create():
+#     print request.form['first_name']
+#     print request.form['last_name']
+#     print request.form['occupation']
+#     # add a friend to the database!
+#     return redirect('/')
+
 @app.route('/friends', methods=['POST'])
 def create():
     # Write query as a string. Notice how we have multiple values
@@ -71,5 +79,5 @@ def delete(friend_id):
     data = {'id': friend_id}
     mysql.query_db(query, data)
     return redirect('/')
-    
+
 app.run(debug=True)
