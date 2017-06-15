@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <meta charset="utf-8">
+      <title>Success Page</title>
+      <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+   </head>
+   <body>
+      {% with messages = get_flashed_messages() %}
+       {% if messages %}
+         {% for message in messages %}
+           <p>{{message}}</p>
+         {% endfor %}
+       {% endif %}
+     {% endwith %}
+
+     <h1>Email addressess Entered</h1>
+      {% for friend in all_friends: %}
+        <p>Email: {{ friend['email'] }} {{ friend['created_at'] }}</p>
+        <!-- <hr> -->
+     {% endfor %}
+</body>
+</html>
