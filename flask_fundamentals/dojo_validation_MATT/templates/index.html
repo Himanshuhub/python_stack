@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Dojo Survey</title>
+    <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='dojo_validation.css')}}">
+  </head>
+  <body>
+    <div class="form">
+      <h1>DOJO SURVEY - NOW WITH VALIDATION!</h1>
+      <form class="" action="/result" method="post">
+          <p>Your Name: <input type="text" name="your_name" value=""></p>
+          <p>Dojo Location
+          <select class="dojo_location" name="dojo_location"></p>
+              <option value="San Jose">San Jose</option>
+              <option value="Seattle">Seattle</option>
+              <option value="Mountain View">Mountain View</option>
+              <option value="Berkeley">Berkeley</option>
+              <option value="Dallas">Dallas</option>
+          </select>
+          <p>Favorite Language
+          <select class="favorite_language" name="favorite_language"></p>
+              <option value="Python">Python</option>
+              <option value="html">HTML</option>
+              <option value="css">CSS</option>
+              <option value="Javascript">Javascript</option>
+              <option value="jQuery">jQuery</option>
+          </select>
+          <p><textarea name="comment" rows="8" cols="80"></textarea></p>
+          <input type="submit" name="button" value="Button">
+      </form>
+    </div>
+  </body>
+</html>

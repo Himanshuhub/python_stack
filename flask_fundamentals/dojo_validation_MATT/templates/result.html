@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Dojo Survey Result</title>
+    <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='dojo_validation.css')}}">
+  </head>
+  <body>
+    <div class="form">
+      <h1>DOJO SURVEY - NOW WITH VALIDATION!</h1>
+      {% with messages = get_flashed_messages() %}
+         {% if messages %}
+           {% for message in messages %}
+             <p>{{message}}</p>
+           {% endfor %}
+         {% endif %}
+      {% endwith %}
+        <h1>Submitted Info</h1>
+        <li>Name: {{ name }}</li>
+        <li>Dojo Location: {{ dojo_location }} </li>
+        <li>Favorite Language: {{ favorite_language }}</li>
+        <li>Comment: {{ comment }} </li>
+        <br>
+      <a href="/">Go Back</a>
+    </div>
+  </body>
+</html>
