@@ -1,26 +1,37 @@
+<!DOCTYPE html>
 <html>
-    <head>
-        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
-    </head>
-<body>
-    <h1>Enter Your Info</h1>
-    <form action='/result' method='post'>
-          Your Name: <input type='text' name='name'> <br>
-          Dojo Location: <select name="location">
-            <option value="sanjose">San Jose</option>
-            <option value="seattle">Seattle</option>
-            <option value="chicago">Chicago</option>
-            <option value="la">LA</option>
-        </select><br>
-          Favorite Language: <select name="language">
-            <option value="python">Python</option>
-            <option value="java">Java</option>
-            <option value="javascript">Javascript</option>
-            <option value="swift">Swift</option>
-        </select><br>
-          Comment (optional): <input type='text' name='comment'><br>
-          <input type='submit' value='create user'>
-      </form>
+   <head>
+      <meta charset="utf-8">
+      <title>Friends</title>
+      <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+   </head>
+   <body>
 
+ <h1>Friends:</h1>
+ <!-- with all the data we can then construct a more structured output -->
+ <table style="width:100%">
+   <tr>
+     <th>Name</th>
+     <th>Age</th>
+     <th>Friend Since</th>
+     <th></th>
+   </tr>
+   {% for friend in all_friends: %}
+      <tr>
+         <td>{{ friend['first_name'] }} {{friend['last_name']}}</td>
+         <td>{{ friend['age'] }}</td>
+         <td>{{ friend['friendSince'] }}</td>
+         <td>{{ friend['yearJoined'] }}</td>
+      </tr>
+   {% endfor %}
+ </table>
+
+ <h2>Add a Friend: </h2>
+ <form action='/friends' method='POST'>
+   <label for="first_name">First Name:<input type="text" name="first_name" id="first_name"></label>
+   <label for="last_name">Last Name:<input type="text" name="last_name" id="last_name"></label>
+   <label for="age">Age:<input type="text" name="age" id="age"></label>
+   <input type="submit" value="Submit">
+ </form>
 </body>
 </html>
