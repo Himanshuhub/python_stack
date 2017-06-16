@@ -13,10 +13,13 @@
          {% endfor %}
        {% endif %}
      {% endwith %}
-
-     <h1>Email addressess Entered</h1>
-      {% for i in all_emailFromQuery: %}
-        <p>Email: {{ i['email'] }} {{ i['created_at'] }}</p>
-     {% endfor %}
+     <!-- <p>{{ all_registrants }}</p> -->
+     <!-- <h1>Email addressess Entered</h1>
+      {% for i in all_registrants: %}
+        <p>firstname: {{ i['firstname'] }}</p>
+        <p>lastname: {{ i['lastname'] }}</p>
+        <p>email: {{ i['email'] }}</p>
+        <p>password: {{ i['password'] }}</p>
+      {% endfor %} -->
 </body>
 </html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <meta charset="utf-8">
+      <title>Email Validation</title>
+      <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+   </head>
+   <body>
+      {% with messages = get_flashed_messages() %}
+       {% if messages %}
+         {% for message in messages %}
+           <p>{{message}}</p>
+         {% endfor %}
+       {% endif %}
+     {% endwith %}
+     <div class="registration">
+
+        <h1>Registration</h1>
+       <form action='/submitregistration' method='POST'>
+         <label for="firstname">First Name:<input type="text" name="firstname" id="firstname"></label><br>
+         <label for="lastname">Last Name:<input type="text" name="lastname" id="lastname"></label><br>
+         <label for="email">Email:<input type="text" name="email" id="email"></label><br>
+         <label for="password">Password:<input type="text" name="password" id="password"></label><br>
+         <input type="submit" value="Submitregistration"><br>
+       </form>
+
+       <h1>Login</h1>
+       <form action='/submitlogin' method='POST'><br>
+         <label for="email">Email:<input type="text" name="email" id="email"></label><br>
+         <label for="password">Password:<input type="text" name="password" id="password"></label><br>
+         <input type="submit" value="Submitlogin"><br>
+       </form>
+      </div>
+</body>
+</html>

@@ -1,0 +1,12 @@
+*{
+  background-color: white;
+}
+table, th, td {
+    border: 1px solid black;
+}
+
+.registration {
+  display: inline-block;
+  margin: 5px;
+  padding: 5px;
+}
