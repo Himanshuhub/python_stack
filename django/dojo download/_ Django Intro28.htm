@@ -1,0 +1,1208 @@
+<!DOCTYPE html>
+<!-- saved from url=(0042)http://learn.codingdojo.com/m/7/3832/29055 -->
+<html lang="en" class="gr__learn_codingdojo_com"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title> | Django Intro</title>
+    <link href="http://learn.codingdojo.com/assets/black_ninja-db2fe4f1051012ab89c235cc9bf3cd5a.ico" rel="shortcut icon" type="image/vnd.microsoft.icon">
+    <link href="./_ Django Intro28_files/chapter_modules_layout-10877b63ecaf40d053cbc3eca7abac66.css" media="all" rel="stylesheet">
+    <link href="./_ Django Intro28_files/modules_layout-d84f0989f3acdff02914b47f05c2b0ea.css" media="all" rel="stylesheet">
+
+
+    <script src="./_ Django Intro28_files/chapter_modules_scripts-1e3ef426b2d22d2a89b8995969431d81.js"></script><style></style><script src="./_ Django Intro28_files/clipboard.min.js"></script>
+    <script src="./_ Django Intro28_files/modules_scripts-9b1bb08e3179f2af0314d4055160c3d8.js"></script>
+
+    <meta content="authenticity_token" name="csrf-param">
+<meta content="1MveEg+QQLmQznQYRpkMuq8We3mwXEIm5itZuDeY0Ow=" name="csrf-token">
+    <script>
+//<![CDATA[
+var AUTH_TOKEN = '1MveEg+QQLmQznQYRpkMuq8We3mwXEIm5itZuDeY0Ow=';
+//]]>
+</script>
+    
+      <script src="./_ Django Intro28_files/socket.io.js" type="text/javascript"></script>
+
+<style type="text/css">.fancybox-margin{margin-right:0px;}</style></head>
+<body data-gr-c-s-loaded="true">
+<input type="checkbox" id="activate_menu_checkbox" class="hidden" checked="checked">
+
+
+<div id="menu_button">
+		<label for="activate_menu_checkbox" class="glyphicon glyphicon-menu-hamburger"></label>
+		<a href="http://learn.codingdojo.com/dashboard#tracks_container" class="button_text unload_link">
+			<div class="track_button">
+				Back to Tracks
+			</div>
+		</a>
+	<!-- <label label for="activate_menu_checkbox" class="glyphicon menu_indicator"></label> -->
+</div>  
+
+<div class="hidden_chapter_title"><a class="chapter_title" href="javascript:void(0)">
+					<h3><span class="chapter-title">Django Intro</span></h3>
+					<!--  -->
+					
+						<div class="progress_container">
+							<span class="chapter_item_progress">
+								47%
+							</span>
+						</div>
+				</a></div>
+<div id="sidebar" class="nano " style="height: 100px;">
+	
+	<ul id="chapter_list" class="nano-content  chapter-list" data-course-id="1276" tabindex="0">
+			<li class="active">
+
+
+
+				<a class="chapter_title unload_link" href="http://learn.codingdojo.com/m/7/3832">
+					<h3><span class="chapter-title">Django Intro</span></h3>
+					<!--  -->
+					
+						<div class="progress_container">
+							<span class="chapter_item_progress">
+								47%
+							</span>
+						</div>
+				</a>
+				<ul class="tab_list  module-list" id="module_list_3832" data-chapter-id="3832">
+
+
+
+
+							<li class="text completed_tab" data-module-id="27040">
+									<a class="tab_title unload_link" href="http://learn.codingdojo.com/m/7/3832/27040">
+									<div class="tab_label"><span class="tab_icon"></span></div>
+									<span class="tab_details" id="quiz_id_27040">
+										<h4>Intro and Overview</h4> <!-- % if contents["type"] == QUIZ_MODULE % -->
+									</span>
+								</a>
+							</li>
+
+							<li class="text completed_tab" data-module-id="27041">
+									<a class="tab_title unload_link" href="http://learn.codingdojo.com/m/7/3832/27041">
+									<div class="tab_label"><span class="tab_icon"></span></div>
+									<span class="tab_details" id="quiz_id_27041">
+										<h4>MTV and MVC</h4> <!-- % if contents["type"] == QUIZ_MODULE % -->
+									</span>
+								</a>
+							</li>
+
+							<li class="text completed_tab" data-module-id="26193">
+									<a class="tab_title unload_link" href="http://learn.codingdojo.com/m/7/3832/26193">
+									<div class="tab_label"><span class="tab_icon"></span></div>
+									<span class="tab_details" id="quiz_id_26193">
+										<h4>Installing Django</h4> <!-- % if contents["type"] == QUIZ_MODULE % -->
+									</span>
+								</a>
+							</li>
+
+							<li class="text completed_tab" data-module-id="26199">
+									<a class="tab_title unload_link" href="http://learn.codingdojo.com/m/7/3832/26199">
+									<div class="tab_label"><span class="tab_icon"></span></div>
+									<span class="tab_details" id="quiz_id_26199">
+										<h4>Big Picture</h4> <!-- % if contents["type"] == QUIZ_MODULE % -->
+									</span>
+								</a>
+							</li>
+
+							<li class="text completed_tab" data-module-id="26201">
+									<a class="tab_title unload_link" href="http://learn.codingdojo.com/m/7/3832/26201">
+									<div class="tab_label"><span class="tab_icon"></span></div>
+									<span class="tab_details" id="quiz_id_26201">
+										<h4>Getting Started</h4> <!-- % if contents["type"] == QUIZ_MODULE % -->
+									</span>
+								</a>
+							</li>
+
+							<li class="text completed_tab" data-module-id="26202">
+									<a class="tab_title unload_link" href="http://learn.codingdojo.com/m/7/3832/26202">
+									<div class="tab_label"><span class="tab_icon"></span></div>
+									<span class="tab_details" id="quiz_id_26202">
+										<h4>URLs and Views</h4> <!-- % if contents["type"] == QUIZ_MODULE % -->
+									</span>
+								</a>
+							</li>
+
+							<li class="text completed_tab" data-module-id="26203">
+									<a class="tab_title unload_link" href="http://learn.codingdojo.com/m/7/3832/26203">
+									<div class="tab_label"><span class="tab_icon"></span></div>
+									<span class="tab_details" id="quiz_id_26203">
+										<h4>Adding Templates</h4> <!-- % if contents["type"] == QUIZ_MODULE % -->
+									</span>
+								</a>
+							</li>
+
+							<li class="text completed_tab" data-module-id="32787">
+									<a class="tab_title unload_link" href="http://learn.codingdojo.com/m/7/3832/32787">
+									<div class="tab_label"><span class="tab_icon"></span></div>
+									<span class="tab_details" id="quiz_id_32787">
+										<h4>Regex Cheatsheet</h4> <!-- % if contents["type"] == QUIZ_MODULE % -->
+									</span>
+								</a>
+							</li>
+
+							<li class="quiz completed_tab" data-module-id="32792">
+									<a class="tab_title unload_link" href="http://learn.codingdojo.com/m/7/3832/32792">
+									<div class="tab_label"><span class="tab_icon"></span></div>
+									<span class="tab_details" id="quiz_id_32792">
+										<h4>Quiz</h4> <!-- % if contents["type"] == QUIZ_MODULE % -->
+									</span>
+								</a>
+							</li>
+
+							<li class="to_do completed_tab" data-module-id="32793">
+									<a class="tab_title unload_link" href="http://learn.codingdojo.com/m/7/3832/32793">
+									<div class="tab_label"><span class="tab_icon"></span></div>
+									<span class="tab_details" id="quiz_id_32793">
+										<h4>Hello World</h4> <!-- % if contents["type"] == QUIZ_MODULE % -->
+									</span>
+								</a>
+							</li>
+
+							<li class="to_do " data-module-id="32795">
+									<a class="tab_title unload_link" href="http://learn.codingdojo.com/m/7/3832/32795">
+									<div class="tab_label"><span class="tab_icon"></span></div>
+									<span class="tab_details" id="quiz_id_32795">
+										<h4>Portfolio</h4> <!-- % if contents["type"] == QUIZ_MODULE % -->
+									</span>
+								</a>
+							</li>
+
+							<li class="to_do " data-module-id="32796">
+									<a class="tab_title unload_link" href="http://learn.codingdojo.com/m/7/3832/32796">
+									<div class="tab_label"><span class="tab_icon"></span></div>
+									<span class="tab_details" id="quiz_id_32796">
+										<h4>The Real Portfolio</h4> <!-- % if contents["type"] == QUIZ_MODULE % -->
+									</span>
+								</a>
+							</li>
+
+							<li class="to_do " data-module-id="32802">
+									<a class="tab_title unload_link" href="http://learn.codingdojo.com/m/7/3832/32802">
+									<div class="tab_label"><span class="tab_icon"></span></div>
+									<span class="tab_details" id="quiz_id_32802">
+										<h4>(optional) Basic Regex</h4> <!-- % if contents["type"] == QUIZ_MODULE % -->
+									</span>
+								</a>
+							</li>
+
+							<li class="text completed_tab" data-module-id="26468">
+									<a class="tab_title unload_link" href="http://learn.codingdojo.com/m/7/3832/26468">
+									<div class="tab_label"><span class="tab_icon"></span></div>
+									<span class="tab_details" id="quiz_id_26468">
+										<h4>Templates and Static Files</h4> <!-- % if contents["type"] == QUIZ_MODULE % -->
+									</span>
+								</a>
+							</li>
+
+							<li class="text completed_tab" data-module-id="26214">
+									<a class="tab_title unload_link" href="http://learn.codingdojo.com/m/7/3832/26214">
+									<div class="tab_label"><span class="tab_icon"></span></div>
+									<span class="tab_details" id="quiz_id_26214">
+										<h4>Session Data and Forms</h4> <!-- % if contents["type"] == QUIZ_MODULE % -->
+									</span>
+								</a>
+							</li>
+
+							<li class="text completed_tab" data-module-id="32800">
+									<a class="tab_title unload_link" href="http://learn.codingdojo.com/m/7/3832/32800">
+									<div class="tab_label"><span class="tab_icon"></span></div>
+									<span class="tab_details" id="quiz_id_32800">
+										<h4>Review</h4> <!-- % if contents["type"] == QUIZ_MODULE % -->
+									</span>
+								</a>
+							</li>
+
+							<li class="quiz " data-module-id="26211">
+									<a class="tab_title unload_link" href="http://learn.codingdojo.com/m/7/3832/26211">
+									<div class="tab_label"><span class="tab_icon"></span></div>
+									<span class="tab_details" id="quiz_id_26211">
+										<h4>Quiz</h4> <!-- % if contents["type"] == QUIZ_MODULE % -->
+									</span>
+								</a>
+							</li>
+
+							<li class="to_do " data-module-id="26208">
+									<a class="tab_title unload_link" href="http://learn.codingdojo.com/m/7/3832/26208">
+									<div class="tab_label"><span class="tab_icon"></span></div>
+									<span class="tab_details" id="quiz_id_26208">
+										<h4>Time Display</h4> <!-- % if contents["type"] == QUIZ_MODULE % -->
+									</span>
+								</a>
+							</li>
+
+							<li class="to_do " data-module-id="26210">
+									<a class="tab_title unload_link" href="http://learn.codingdojo.com/m/7/3832/26210">
+									<div class="tab_label"><span class="tab_icon"></span></div>
+									<span class="tab_details" id="quiz_id_26210">
+										<h4>Random Word Generator</h4> <!-- % if contents["type"] == QUIZ_MODULE % -->
+									</span>
+								</a>
+							</li>
+
+							<li class="to_do " data-module-id="26213">
+									<a class="tab_title unload_link" href="http://learn.codingdojo.com/m/7/3832/26213">
+									<div class="tab_label"><span class="tab_icon"></span></div>
+									<span class="tab_details" id="quiz_id_26213">
+										<h4>Survey Form</h4> <!-- % if contents["type"] == QUIZ_MODULE % -->
+									</span>
+								</a>
+							</li>
+
+							<li class="to_do " data-module-id="26221">
+									<a class="tab_title unload_link" href="http://learn.codingdojo.com/m/7/3832/26221">
+									<div class="tab_label"><span class="tab_icon"></span></div>
+									<span class="tab_details" id="quiz_id_26221">
+										<h4>Ninja Gold</h4> <!-- % if contents["type"] == QUIZ_MODULE % -->
+									</span>
+								</a>
+							</li>
+
+							<li class="to_do " data-module-id="33118">
+									<a class="tab_title unload_link" href="http://learn.codingdojo.com/m/7/3832/33118">
+									<div class="tab_label"><span class="tab_icon"></span></div>
+									<span class="tab_details" id="quiz_id_33118">
+										<h4>(optional) Text Analysis</h4> <!-- % if contents["type"] == QUIZ_MODULE % -->
+									</span>
+								</a>
+							</li>
+
+							<li class="to_do " data-module-id="33120">
+									<a class="tab_title unload_link" href="http://learn.codingdojo.com/m/7/3832/33120">
+									<div class="tab_label"><span class="tab_icon"></span></div>
+									<span class="tab_details" id="quiz_id_33120">
+										<h4>(optional) Searching Text</h4> <!-- % if contents["type"] == QUIZ_MODULE % -->
+									</span>
+								</a>
+							</li>
+
+							<li class="text completed_tab" data-module-id="26215">
+									<a class="tab_title unload_link" href="http://learn.codingdojo.com/m/7/3832/26215">
+									<div class="tab_label"><span class="tab_icon"></span></div>
+									<span class="tab_details" id="quiz_id_26215">
+										<h4>Context Objects</h4> <!-- % if contents["type"] == QUIZ_MODULE % -->
+									</span>
+								</a>
+							</li>
+
+							<li class="text completed_tab" data-module-id="26216">
+									<a class="tab_title unload_link" href="http://learn.codingdojo.com/m/7/3832/26216">
+									<div class="tab_label"><span class="tab_icon"></span></div>
+									<span class="tab_details" id="quiz_id_26216">
+										<h4>Route Parameters</h4> <!-- % if contents["type"] == QUIZ_MODULE % -->
+									</span>
+								</a>
+							</li>
+
+							<li class="text  current" data-module-id="29055">
+									<a class="tab_title unload_link" href="http://learn.codingdojo.com/m/7/3832/29055">
+									<div class="tab_label"><span class="tab_icon"></span></div>
+									<span class="tab_details" id="quiz_id_29055">
+										<h4>Setup Cheatsheet</h4> <!-- % if contents["type"] == QUIZ_MODULE % -->
+									</span>
+								</a>
+							</li>
+
+							<li class="quiz " data-module-id="26218">
+									<a class="tab_title unload_link" href="javascript:void(0)">
+									<div class="tab_label"><span class="tab_icon"></span></div>
+									<span class="tab_details" id="quiz_id_26218">
+										<h4>Quiz</h4> <!-- % if contents["type"] == QUIZ_MODULE % -->
+									</span>
+								</a>
+							</li>
+
+							<li class="to_do " data-module-id="26220">
+									<a class="tab_title unload_link" href="javascript:void(0)">
+									<div class="tab_label"><span class="tab_icon"></span></div>
+									<span class="tab_details" id="quiz_id_26220">
+										<h4>Disappearing Ninjas</h4> <!-- % if contents["type"] == QUIZ_MODULE % -->
+									</span>
+								</a>
+							</li>
+
+							<li class="to_do " data-module-id="32798">
+									<a class="tab_title unload_link" href="javascript:void(0)">
+									<div class="tab_label"><span class="tab_icon"></span></div>
+									<span class="tab_details" id="quiz_id_32798">
+										<h4>Surprise Me!</h4> <!-- % if contents["type"] == QUIZ_MODULE % -->
+									</span>
+								</a>
+							</li>
+
+							<li class="to_do " data-module-id="32799">
+									<a class="tab_title unload_link" href="javascript:void(0)">
+									<div class="tab_label"><span class="tab_icon"></span></div>
+									<span class="tab_details" id="quiz_id_32799">
+										<h4>Landscapes</h4> <!-- % if contents["type"] == QUIZ_MODULE % -->
+									</span>
+								</a>
+							</li>
+
+							<li class="to_do " data-module-id="32935">
+									<a class="tab_title unload_link" href="javascript:void(0)">
+									<div class="tab_label"><span class="tab_icon"></span></div>
+									<span class="tab_details" id="quiz_id_32935">
+										<h4>(optional) Django and AJAX</h4> <!-- % if contents["type"] == QUIZ_MODULE % -->
+									</span>
+								</a>
+							</li>
+
+							<li class="to_do " data-module-id="32933">
+									<a class="tab_title unload_link" href="javascript:void(0)">
+									<div class="tab_label"><span class="tab_icon"></span></div>
+									<span class="tab_details" id="quiz_id_32933">
+										<h4>(optional) Django Crawler</h4> <!-- % if contents["type"] == QUIZ_MODULE % -->
+									</span>
+								</a>
+							</li>
+				</ul>
+			</li>
+			<li class="">
+
+
+
+				<a class="chapter_title unload_link" href="http://learn.codingdojo.com/m/7/3834">
+					<h3><span class="chapter-title">Full Stack Django</span></h3>
+					<!--  -->
+					
+						<div class="progress_container">
+							<span class="chapter_item_progress">
+								34%
+							</span>
+						</div>
+				</a>
+				<ul class="tab_list  module-list" id="module_list_3834" data-chapter-id="3832">
+
+
+
+				</ul>
+			</li>
+			<li class="">
+
+
+
+				<a class="chapter_title unload_link" href="http://learn.codingdojo.com/m/7/4455">
+					<h3><span class="chapter-title">Django and AJAX</span></h3>
+					<!--  -->
+					
+						<div class="progress_container">
+							<span class="chapter_item_progress">
+								0%
+							</span>
+						</div>
+				</a>
+				<ul class="tab_list  module-list" id="module_list_4455" data-chapter-id="3832">
+
+
+
+				</ul>
+			</li>
+	</ul>
+<div class="nano-pane" style="display: block;"><div class="nano-slider" style="height: 310px; transform: translate(0px, 372px);"></div></div></div>
+<nav id="main_navigation">
+	<div id="navbar">
+		<ul id="breadcrumbs" class="left_align">
+			<li>Python / Django</li>
+			<li>Django v2</li>
+			<li id="chapter_title">Django Intro</li>
+			<li class="module_title">Setup Cheatsheet</li>
+		</ul>
+		<div id="profile_block" class="pull-right">
+			<img src="./_ Django Intro28_files/Microsoft.jpg" alt="Himanshu" class="profile_image">
+			<div class="dropdown">
+				<a href="http://learn.codingdojo.com/m/7/3832/29055#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+					<div id="user_name_block">
+						<div>
+							<span class="decor_text">Hello,  </span> 
+							<span class="user_name">Himanshu G</span>
+						</div>
+					</div>
+					<span class="caret"></span>
+				</a>
+				<div class="dropdown-menu dropdown-menu-right" role="menu">
+					<div class="dropdown_content">	
+						<ul>
+							<li>
+								<a href="http://learn.codingdojo.com/dashboard">Dashboard</a>
+								<span class="glyphicon glyphicon-home pull-right" aria-hidden="true"></span>
+							</li>
+							<li>
+								<a href="http://learn.codingdojo.com/dashboard#tracks_container">Tracks</a>
+								<span class="glyphicon glyphicon-book pull-right" aria-hidden="true"></span>
+							</li>
+							<li data-target="#my_account_modal" data-toggle="modal">
+								<a href="http://learn.codingdojo.com/m/7/3832/29055#" class="view_user_info">My Account</a>
+								<span class="glyphicon glyphicon-user pull-right" aria-hidden="true"></span>
+							</li>
+							<li class="dropdown_buttons">
+								<a id="signout_button" class="btn btn-primary btn-lg btn-block unload_link" href="http://learn.codingdojo.com/signout">Log Out</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</nav>
+
+<section id="main_content">
+    	<div id="content_navigation">
+
+		<div id="return_button" class="right_align">
+			<a href="http://learn.codingdojo.com/dashboard" class="unload_link">
+				<span class="glyphicon glyphicon-th-large"></span><span>Home</span> 
+			</a>
+			<input type="hidden" name="authenticity_token" value="1MveEg+QQLmQznQYRpkMuq8We3mwXEIm5itZuDeY0Ow=" current-module="29055"> 
+		</div>
+	</div>
+	<div id="section_content">
+	<div id="assignment-metadata"></div>
+		<div class="content_block">
+			<div id="module_container">
+				<div class="module_content module_content_block">
+
+								<div class="module_description active_lesson active_lesson_with_video ">
+									
+            
+            <style>
+	.new{
+    color: Red;
+  }
+</style>
+<h2>Django Project Cheat Sheet</h2>
+<p>
+Here is a crib sheet of the process of creating a Django application from scratch. This is a summary sheet of the commands you've learned up to this point. It's a good idea to be very familiar with this process, and this sheet is useful for a quick reference once you've gotten a good grasp of the concepts they describe.
+</p>
+<h2>Install</h2>
+<h3>Mac:</h3>
+<pre data-language="bash" class=" code-toolbar  language-bash"><code class="  language-bash"><span class="token operator">&gt;</span> virtualenv djangoEnv
+<span class="token operator">&gt;</span> <span class="token function">source</span> djangoEnv/bin/activate
+<span class="token punctuation">(</span>djangoEnv<span class="token punctuation">)</span><span class="token operator">&gt;</span>pip <span class="token function">install</span> django
+</code><div class="toolbar"><div class="toolbar-item"><a>Copy</a></div></div></pre>
+<h3>PC:</h3>
+<pre data-language="bash" class=" code-toolbar  language-bash"><code class="  language-bash"><span class="token operator">&gt;</span> python -m virtualenv djangoEnv
+<span class="token operator">&gt;</span> call djangoEnv/scripts/activate
+<span class="token punctuation">(</span>djangoEnv<span class="token punctuation">)</span><span class="token operator">&gt;</span>pip <span class="token function">install</span> django
+</code><div class="toolbar"><div class="toolbar-item"><a>Copy</a></div></div></pre>
+<h2>Activate virtualenv</h2>
+<h3>Mac:</h3>
+<li>
+<pre data-language="bash" class=" code-toolbar  language-bash"><code class="  language-bash"><span class="token function">source</span> djangoEnv/bin/activate
+</code><div class="toolbar"><div class="toolbar-item"><a>Copy</a></div></div></pre>
+</li>
+<h3>PC:</h3>
+<li>
+<pre datat-langugae="bash">call djangoEnv/scripts/activate
+</pre>
+</li>
+<h2>Create project</h2>
+<pre data-language="python" class=" code-toolbar  language-python"><code class="  language-python"><span class="token comment" spellcheck="true"># 'main' is the project name used below</span>
+django<span class="token operator">-</span>admin startproject main
+</code><div class="toolbar"><div class="toolbar-item"><a>Copy</a></div></div></pre>
+<h3>The project has been created, inspect the file &amp; folders created as a result:</h3>
+<ul class="new">
+	<li>Folder: main</li>
+	<ul>
+		<li class="new">File: manage.py &lt;= used to run the application.</li>
+		<li>Folder: main &lt;= contains the files specific to our app.</li>
+		<ul>
+			<li>File: __init__.py</li>
+			<li>File: settings.py</li>
+			<li>File: urls.py</li>
+			<li>File: wsgi.py</li>
+		</ul>
+	</ul>
+</ul>
+<h3>A few more config items to complete the setup:</h3>
+<ul>
+	<li>Navigate into the main directory that you just created.</li>
+<pre data-language="bash" class=" code-toolbar  language-bash"><code class="  language-bash"><span class="token operator">&gt;</span> <span class="token function">cd</span> main
+</code><div class="toolbar"><div class="toolbar-item"><a>Copy</a></div></div></pre>
+	<li>Make a new apps directory</li>
+	<pre data-language="bash" class=" code-toolbar  language-bash"><code class="  language-bash"><span class="token operator">&gt;</span> <span class="token function">mkdir</span> apps
+	</code><div class="toolbar"><div class="toolbar-item"><a>Copy</a></div></div></pre>
+	<li>Navigate into apps</li>
+	<pre data-language="bash" class=" code-toolbar  language-bash"><code class="  language-bash"><span class="token operator">&gt;</span> <span class="token function">cd</span> apps
+	</code><div class="toolbar"><div class="toolbar-item"><a>Copy</a></div></div></pre>
+	<li>Create an __init__.py file. This just let's Python know that this folder is viewable by Python so that
+      # other Python modules can look in here and access the code!
+	</li>
+	<h4>
+	Bash: (Mac, Linux, PCs with GitBash) =&gt;</h4>
+	<pre data-language="bash" class=" code-toolbar  language-bash"><code class="  language-bash"><span class="token function">touch</span> __init__.py
+	</code><div class="toolbar"><div class="toolbar-item"><a>Copy</a></div></div></pre>
+	<h4>
+	PCs: (Command Prompt) =&gt; </h4>
+	<pre data-language="bash" class=" code-toolbar  language-bash"><code class="  language-bash">nul<span class="token operator">&gt;</span> __init__.py
+</code><div class="toolbar"><div class="toolbar-item"><a>Copy</a></div></div></pre>
+</ul>
+<h3>Start the new app.</h3>
+<pre data-language="bash" class=" code-toolbar  language-bash"><code class="  language-bash"><span class="token operator">&gt;</span> python <span class="token punctuation">..</span>/manage.py startapp first_app
+</code><div class="toolbar"><div class="toolbar-item"><a>Copy</a></div></div></pre>
+<h3>The app 'first_app' has been created, lets look at the updated file/folder structure:</h3>
+<ul>
+	<li>Folder: main</li>
+	<ul>
+		<li class="new">Folder: apps &lt;= created by our steps above</li>
+		<ul class="new">
+			<li>File: __init__.py &lt;= created by our steps above</li>
+			<li>Folder: first_app &lt;= created as a result to the call to 'startapp'</li>
+			<ul>
+				<li>File: __init__.py</li>
+				<li>File: admin.py</li>
+				<li>File: apps.py</li>
+				<li>File: models.py &lt;= The 'M' in MVC</li>
+				<li>File: tests.py</li>
+				<li>File: views.py &lt;= The CONTROLLER in our MVC pattern</li>
+			</ul>
+		</ul>
+		<li>File: manage.py &lt;= used to run the application.</li>
+		<li>Folder: main &lt;= contains the files specific to our app.</li>
+		<ul>
+			<li>File: __init__.py</li>
+			<li>File: settings.py</li>
+			<li>File: urls.py</li>
+			<li>File: wsgi.py</li>
+		</ul>
+	</ul>
+</ul>
+<p>
+ Open the settings.py file an add a line to your INSTALLED_APPS:
+</p>
+<pre data-language="python" class=" code-toolbar  language-python"><code class="  language-python">INSTALLED_APPS <span class="token operator">=</span> <span class="token punctuation">[</span>
+	<span class="token string">'apps.first_app'</span><span class="token punctuation">,</span> <span class="token comment" spellcheck="true">### &lt;= added this line!</span>
+	<span class="token string">'django.contrib.admin'</span><span class="token punctuation">,</span>
+	<span class="token string">'django.contrib.auth'</span><span class="token punctuation">,</span>
+	<span class="token string">'django.contrib.contenttypes'</span><span class="token punctuation">,</span>
+	<span class="token string">'django.contrib.sessions'</span><span class="token punctuation">,</span>
+	<span class="token string">'django.contrib.messages'</span><span class="token punctuation">,</span>
+	<span class="token string">'django.contrib.staticfiles'</span><span class="token punctuation">,</span>
+<span class="token punctuation">]</span>
+</code><div class="toolbar"><div class="toolbar-item"><a>Copy</a></div></div></pre>
+<p>
+ Open the urls.py file, add the line to import include and add a line to include all of the url routes from our app into the main app's url routes.
+</p>
+<pre data-language="python" class=" code-toolbar  language-python"><code class="  language-python"><span class="token keyword">from</span> django<span class="token punctuation">.</span>conf<span class="token punctuation">.</span>urls <span class="token keyword">import</span> url<span class="token punctuation">,</span> include <span class="token comment" spellcheck="true"># Notice we added include</span>
+<span class="token keyword">from</span> django<span class="token punctuation">.</span>contrib <span class="token keyword">import</span> admin
+urlpatterns <span class="token operator">=</span> <span class="token punctuation">[</span>
+	url<span class="token punctuation">(</span>r<span class="token string">'^'</span><span class="token punctuation">,</span> include<span class="token punctuation">(</span><span class="token string">'apps.first_app.urls'</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token comment" spellcheck="true"># And now we use include to pull in our first_app.urls...</span>
+<span class="token punctuation">]</span>
+</code><div class="toolbar"><div class="toolbar-item"><a>Copy</a></div></div></pre>
+<p>
+ Now, create the urls.py file in our 'first_app' folder so that the final file/folder structure looks like this:
+</p>
+<ul>
+	<li>Folder: main</li>
+	<ul>
+		<li>Folder: apps &lt;= created by our steps above</li>
+		<ul>
+			<li>File: __init__.py &lt;= created by our steps above</li>
+			<li>Folder: first_app &lt;= created as a result to the call to 'startapp'</li>
+			<ul>
+				<li>File: __init__.py</li>
+				<li>File: admin.py</li>
+				<li>File: apps.py</li>
+				<li>File: models.py &lt;= The 'M' in MVC</li>
+				<li>File: tests.py</li>
+				<li>File: views.py &lt;= The CONTROLLER in our MVC pattern</li>
+				<li class="new">urls.py &lt;= the file that will handle the routes of our app</li>
+			</ul>
+		</ul>
+		<li>File: manage.py &lt;= used to run the application.</li>
+		<li>Folder: main &lt;= contains the files specific to our app.</li>
+		<ul>
+			<li>File: __init__.py</li>
+			<li>File: settings.py</li>
+			<li>File: urls.py</li>
+			<li>File: wsgi.py</li>
+		</ul>
+	</ul>
+</ul>
+<h3>Add some routes to our urls.py file!</h3>
+<pre data-language="python" class=" code-toolbar  language-python"><code class="  language-python"><span class="token keyword">from</span> django<span class="token punctuation">.</span>conf<span class="token punctuation">.</span>urls <span class="token keyword">import</span> url
+<span class="token keyword">from</span> <span class="token punctuation">.</span> <span class="token keyword">import</span> views           <span class="token comment" spellcheck="true"># So we can call functions from our routes!</span>
+urlpatterns <span class="token operator">=</span> <span class="token punctuation">[</span>
+	url<span class="token punctuation">(</span>r<span class="token string">'^$'</span><span class="token punctuation">,</span> views<span class="token punctuation">.</span>index<span class="token punctuation">)</span>       <span class="token comment" spellcheck="true"># 'home' route.</span>
+<span class="token punctuation">]</span>
+</code><div class="toolbar"><div class="toolbar-item"><a>Copy</a></div></div></pre>
+<h3>Finally, run the app:</h3>
+<pre data-language="bash" class=" code-toolbar  language-bash"><code class="  language-bash">python manage.py runserver
+</code><div class="toolbar"><div class="toolbar-item"><a>Copy</a></div></div></pre>
+<h3>Adding views &amp; static files</h3>
+<ul>
+	<li>Folder: main</li>
+	<ul>
+		<li>Folder: apps &lt;= created by our steps above</li>
+		<ul>
+			<li>File: __init__.py &lt;= created by our steps above</li>
+			<li>Folder: first_app &lt;= created as a result to the call to 'startapp'</li>
+			<ul>
+				<li class="new">Folder: templates</li>
+				<ul class="new">
+					<li>Folder: first_app</li>
+					<ul>
+						<li>Files: *.html</li>
+					</ul>
+				</ul>
+				<li class="new">Folder: static</li>
+				<ul class="new">
+					<li>Folder: first_app</li>
+					<ul>
+						<li>Folder: css</li>
+						<li>Folder: js</li>
+						<li>Folder: images</li>
+					</ul>
+				</ul>
+				<li>File: __init__.py</li>
+				<li>File: admin.py</li>
+				<li>File: apps.py</li>
+				<li>File: models.py &lt;= The 'M' in MVC</li>
+				<li>File: tests.py</li>
+				<li>File: views.py &lt;= The CONTROLLER in our MVC pattern</li>
+				<li>urls.py &lt;= the file that will handle the routes of our app</li>
+			</ul>
+		</ul>
+		<li>File: manage.py &lt;= used to run the application.</li>
+		<li>Folder: main &lt;= contains the files specific to our app.</li>
+		<ul>
+			<li>File: __init__.py</li>
+			<li>File: settings.py</li>
+			<li>File: urls.py</li>
+			<li>File: wsgi.py</li>
+		</ul>
+	</ul>
+</ul>
+<h3>Example of a Controller action ('View' in Django:)</h3>
+<pre data-language="python" class=" code-toolbar  language-python"><code class="  language-python"><span class="token comment" spellcheck="true"># views.py</span>
+<span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
+<span class="token keyword">def</span> <span class="token function">index</span><span class="token punctuation">(</span>request<span class="token punctuation">)</span><span class="token punctuation">:</span>
+	<span class="token keyword">return</span> render<span class="token punctuation">(</span>request<span class="token punctuation">,</span> <span class="token string">"first_app/index.html"</span><span class="token punctuation">)</span>
+</code><div class="toolbar"><div class="toolbar-item"><a>Copy</a></div></div></pre>
+<h3>Implement sessions in our app:</h3>
+<pre data-language="bash" class=" code-toolbar  language-bash"><code class="  language-bash"><span class="token comment" spellcheck="true"># Need to be in same directory as manage.py file</span>
+<span class="token operator">&gt;</span> python manage.py makemigrations
+<span class="token operator">&gt;</span> python manage.py migrate
+</code><div class="toolbar"><div class="toolbar-item"><a>Copy</a></div></div></pre>
+<h3>Context</h3>
+<h4>On the server:</h4>
+<pre data-language="python" class=" code-toolbar  language-python"><code class="  language-python"><span class="token keyword">from</span> django<span class="token punctuation">.</span>shortcuts <span class="token keyword">import</span> render<span class="token punctuation">,</span> HttpResponse<span class="token punctuation">,</span> redirect
+<span class="token keyword">def</span> <span class="token function">show_ninja</span><span class="token punctuation">(</span>request<span class="token punctuation">,</span> ninja<span class="token punctuation">)</span><span class="token punctuation">:</span>
+	<span class="token comment" spellcheck="true">#ninja got passed in through the url parameter!</span>
+	context <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token string">'myninja'</span> <span class="token punctuation">:</span> ninja<span class="token punctuation">}</span>
+	<span class="token keyword">return</span> render<span class="token punctuation">(</span>request<span class="token punctuation">,</span> <span class="token string">'/myproject/showmyninja.html'</span><span class="token punctuation">,</span> context<span class="token punctuation">)</span>
+</code><div class="toolbar"><div class="toolbar-item"><a>Copy</a></div></div></pre>
+<h4>In our templates:</h4>
+<pre data-language="html" class=" code-toolbar  language-html"><code class="  language-html"><span class="token comment" spellcheck="true">&lt;!-- From inside /myproject/showmyninja.html --&gt;</span>
+{{myninja}}
+</code><div class="toolbar"><div class="toolbar-item"><a>Copy</a></div></div></pre>
+<h3>Route Parameters</h3>
+<h4>In our urls.py file:</h4>
+<pre data-language="python" class=" code-toolbar  language-python"><code class="  language-python"><span class="token comment" spellcheck="true"># Inside apps/appname/urls.py might look like this:</span>
+<span class="token keyword">from</span> django<span class="token punctuation">.</span>conf<span class="token punctuation">.</span>urls <span class="token keyword">import</span> url
+<span class="token keyword">from</span> <span class="token punctuation">.</span> <span class="token keyword">import</span> views
+urlpatterns <span class="token operator">=</span> <span class="token punctuation">[</span>
+	url<span class="token punctuation">(</span>r<span class="token string">'^/en/(?P&lt;djangoversion&gt;[0-9]\.[0-9])/topics/http/urls/$'</span><span class="token punctuation">,</span> views<span class="token punctuation">.</span>index<span class="token punctuation">)</span>
+<span class="token punctuation">]</span>
+</code><div class="toolbar"><div class="toolbar-item"><a>Copy</a></div></div></pre>
+<h4>In our views.py file:</h4>
+<pre data-language="python" class=" code-toolbar  language-python"><code class="  language-python"><span class="token keyword">from</span> django<span class="token punctuation">.</span>shortcuts <span class="token keyword">import</span> render<span class="token punctuation">,</span> HttpResponse<span class="token punctuation">,</span> redirect
+<span class="token comment" spellcheck="true"># Create your views here.</span>
+<span class="token keyword">def</span> <span class="token function">index</span><span class="token punctuation">(</span>request<span class="token punctuation">,</span> djangoversion<span class="token punctuation">)</span><span class="token punctuation">:</span>
+	<span class="token keyword">print</span><span class="token punctuation">(</span>djangoversion<span class="token punctuation">)</span> <span class="token comment" spellcheck="true"># will result in a string e.g. "1.9"</span>
+	<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"hello, I am your first request"</span><span class="token punctuation">)</span>
+	<span class="token keyword">return</span> HttpResponse<span class="token punctuation">(</span><span class="token string">'hello'</span><span class="token punctuation">)</span>
+</code><div class="toolbar"><div class="toolbar-item"><a>Copy</a></div></div></pre>
+        
+        
+								</div>
+						
+
+					
+					
+					<!-- Modal Inactivity Notice Modal -->
+					<div class="modal fade info_modal" id="inactivity_notice_modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" data-backdrop="static" data-keyboard="false">
+						<div class="modal-dialog" style="margin-top: 204.6px;">
+							<div class="modal-content">
+								<span class="hide_modal glyphicon glyphicon-remove" data-dismiss="modal" aria-label="Close"></span>
+								<div class="modal_header">
+									<h4>Inactivity Notice</h4>
+									<span class="glyphicon glyphicon-question-sign notice_tooltip pull-right" data-toggle="tooltip" data-placement="right" title="The system keeps track if you are active or not. We are saving the total time you spent on each topic for course improvement and student support purposes."></span>
+								</div>
+								<div class="modal_body">
+									<p>You have been idle for a long time, click the button below if you are you are still there.</p>
+									<a href="http://learn.codingdojo.com/m/7/3832/29055#" class="btn btn-primary continue_btn" data-dismiss="modal">CLICK TO CONTINUE</a>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- end of Modal Inactivity Notice Modal -->
+
+					<!-- Log out from another device modal --> <!-- end of Log out from another device modal -->
+				</div>
+			</div>
+
+		</div>	
+
+		<div class="content_footer_block">
+			<a class="site_terms_link" data-target=".privacy_policy_modal" data-toggle="modal">Privacy Policy</a>
+			<div id="report_mistake_label_container" class="pull-right">
+				<span>To report a mistake, highlight the selection you believe is in error.</span>
+			</div>
+		</div>
+
+		<!-- cts warning modal -->
+		<div class="modal fade info_modal cts_warning_modal" tabindex="-1" role="dialog" aria-hidden="true">
+			<div class="modal-dialog" style="margin-top: 204.6px;">
+				<div class="modal-content">
+					<span class="hide_modal glyphicon glyphicon-remove" data-dismiss="modal" aria-label="Close"></span>
+					<form action="http://learn.codingdojo.com/m/7/3832/29055" id="cts_warning_form">
+						<div class="modal_header"><h4>Confirm Action</h4></div>
+						<div class="modal_body">
+							<p>Only <span class="time_passed"></span> had passed since you started this assignment. Are you sure you want to view the Answersheet? The more you code on your own, the more you become a self-sufficient software engineer</p>
+							<a href="javascript:void(0);" class="btn btn-default cancel_btn" data-dismiss="modal">CANCEL</a>
+							<!-- <a href="javascript:void(0);" class="btn btn-primary submit_btn continue_btn" data-dismiss="modal">CONTINUE</a> -->
+							<input type="submit" class="btn btn-primary submit_btn continue_btn" id="view_answersheets" data-dismiss="modal" value="CONTINUE">
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+
+	</div> 
+
+	<!-- Reported a mistake popover -->
+	<a href="http://learn.codingdojo.com/m/7/3832/29055#" class="hidden" id="report_mistake_popover" data-placement="bottom"></a>
+	<div class="hidden" id="report_mistake_popover_clone">
+		<span class="report_mistake_label">Report a mistake</span>
+		<form id="report_mistake_container" action="http://learn.codingdojo.com/report_mistake">
+			<h5>Report a mistake</h5>
+			<input type="hidden" name="chapter_module_id" value="29055">
+			<input type="hidden" name="authenticity_token" value="1MveEg+QQLmQznQYRpkMuq8We3mwXEIm5itZuDeY0Ow=">
+			<input type="hidden" name="course_id" value="1276">
+			<input type="hidden" name="track_id" value="7">
+			<textarea name="report_mistake_textarea" id="report_mistake_textarea" rows="5" placeholder="Tell us what&#39;s wrong"></textarea>
+			<input type="submit" value="SUBMIT" class="btn btn-primary btn-block">
+		</form>
+	</div>
+	<!-- END of Reported a mistake popover -->
+
+	<ul class="create_message_container">
+		<!-- Append the Chat here -->
+		<li class="chat_counter hidden"> 
+			<span class="glyphicon glyphicon-comment"></span> 
+			<span id="number_of_hidden_chat"></span>
+		</li>
+	</ul>
+	<div id="content_footer" style="width: 1036px;">	
+		<div class="prev_button">  
+			<a href="http://learn.codingdojo.com/m/7/3832/26216" class="btn btn-primary previous_button_link unload_link">
+				<span class="glyphicon glyphicon-chevron-left"></span>
+				Previous
+			</a>
+			<!-- <span class="glyphicon glyphicon-chevron-left"></span>
+			<a href="/m/7/3832/26216" class="previous_button_link unload_link">Prev</a> -->
+		</div>
+		<a href="javascript:void(0);" class="back_button">Back to Track</a>
+		<div class="next_button pull-right">
+				<a href="http://learn.codingdojo.com/m/7/3832/26218" class="btn btn-primary next_button_link unload_link">
+					Next
+					<span class="glyphicon glyphicon-chevron-right"></span>
+				</a>
+				<!-- <a href="/m/7/3832/26218" class="next_button_link unload_link">Next</a> -->
+				<a href="http://learn.codingdojo.com/m/7/3832/26218" class="real_next_link hidden"></a>
+				<!-- <span class="glyphicon glyphicon-chevron-right"></span> -->
+		</div>
+		
+		<input type="hidden" id="current_module_id" name="authenticity_token" value="1MveEg+QQLmQznQYRpkMuq8We3mwXEIm5itZuDeY0Ow=" current-module="29055" course-percentage=""> 
+		<div id="linkage" data-target="#inactivity_notice_modal" data-toggle="modal" style="display:none;"></div>
+	</div>
+	<!-- My Account Modal -->
+	  <div id="my_account_modal" tabindex="-1" role="dialog" aria-hidden="true" class="modal fade">
+	    <div class="modal-dialog modal-lg">
+	      <div class="modal-content">
+	      	<span class="hide_modal glyphicon glyphicon-remove" data-dismiss="modal" aria-label="Close"></span>
+	        <div class="user_information_block">
+	          <form action="http://learn.codingdojo.com/upload_profile_pic" id="upload_profile_pic_form" class="profile_pic" enctype="multipart/form-data" method="post">
+	            <input type="hidden" name="authenticity_token" value="1MveEg+QQLmQznQYRpkMuq8We3mwXEIm5itZuDeY0Ow=">
+	            <input id="browse_pic" class="browse_profile_pic hidden" type="file">
+	              <label for="browse_pic">
+	                <span class="profile_preview">
+	                  <img src="./_ Django Intro28_files/Microsoft.jpg" alt="Himanshu"> 
+	              </span>
+	              </label>
+	          </form>
+	          <ul class="list-unstyled">
+	            <li>Name: Himanshu Gupta</li>
+	            <li>Email: himanshuguptams@gmail.com</li>
+	            <li>Password: <span class="password">************</span> <span class="change_password">change password</span></li>
+	            <li>Program Type: Onsite Flex</li>
+	            <li>Location: San Jose</li>
+	            <li>Start Date: March 20, 2017</li>
+	            <li>Access Expiration: December 30, 2017</li>
+	          </ul>
+	        </div>
+	        <form class="change_password_block">
+	          <ul class="list-unstyled">
+	            <li>
+	              <span>Old Password:</span>
+	              <input type="password" class="old_password_input match">
+	            </li>
+	            <li>
+	              <span>New Password:</span>
+	              <input type="password" class="new_password_input match">
+	            </li>
+	            <li>
+	              <span>Confirm New Password:</span>
+	              <input type="password" class="confirm_new_password_input match">
+	            </li>
+	            <li>
+	              <button type="button" class="btn btn-primary save_new_password_button">SAVE</button>
+	            </li>
+	          </ul>
+	        </form>
+	        <p class="modal-messages"></p>
+	      </div>
+	    </div>
+	  </div>    
+	<!-- end of My Account Modal  -->
+
+	<!-- Privacy Policy Modal -->
+	<div class="modal fade privacy_policy_modal" tabindex="-1" role="dialog" data-keyboard="">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<span class="hide_modal glyphicon glyphicon-remove" data-dismiss="modal" aria-label="Close"></span>
+				
+				<div id="terms_of_service">
+					<div class="greetings">
+						<p id="thank_you_greeting">Thank you for taking the time to learn about our legal policies.</p>
+						<p id="greeting">Your privacy is important to us.</p>
+					</div>
+					<div class="links">
+						<p id="privacy_policy">
+							<a href="http://www.codingdojo.com/files/Privacy_Policy.pdf" target="_blank">Privacy Policy</a>
+						</p>
+						<p id="acceptable_use">
+							<a href="http://www.codingdojo.com/files/Acceptable_Use_Policy.pdf" target="_blank">Acceptable Use</a>
+						</p>
+						<p id="site_terms">
+							<a href="http://www.codingdojo.com/files/Site_Terms.pdf" target="_blank">Site Terms</a>
+						</p>
+					</div>
+					<a href="javascript:void(0)" class="btn btn-primary" id="close_button" data-dismiss="modal">CLOSE</a>
+				</div>
+			</div>
+		</div>
+	</div> 
+
+</section>
+
+<!-- Clone Template -->
+<div id="clone_template_container" class="hidden">
+	<ul id="chat_item">
+		<li data-chat-id="" data-module-id="" class="active_chat chat"> 
+		    <input type="checkbox" class="chat_checkbox" id="" checked="checked"> 
+		    <div class="chat_container"> 	
+		        <div class="chat_header"> 
+		            <label for="chat_checkbox_" class="hide_chat"> 
+		                <span class="glyphicon glyphicon-comment"></span> 
+		                <span class="name"></span> 
+		                <span class="glyphicon glyphicon-triangle-bottom"></span> 
+		                <span class="glyphicon glyphicon-remove remove_chat"></span> 
+		            </label> 
+		        </div>  
+		        <div class="chat_body"> 
+		            <div class="settings"> 
+		                <span class="start_this_call glyphicon glyphicon-facetime-video" title="Video call. Click to start a video call."></span>
+		            </div> 
+		            <div class="conversation_container nano"> 
+		                <ul class="nano-content" tabindex="0"> 
+		                </ul> 
+		            <div class="nano-pane" style="display: none;"><div class="nano-slider" style="transform: translate(0px, 0px);"></div></div></div> 
+		            <div class="hidden_div"></div> 
+		        </div> 
+		        <form class="input_container"> 
+		            <textarea name="" class="form-control enter_message" placeholder="Send a message"></textarea> 
+		            <input type="hidden"> 
+		        </form> 
+		    </div> 
+		</li>
+	</ul>
+
+	<div id="video_walk_through">
+		<a class="how_we_did_video"> 
+	    	<div class="how_we_did_block">
+	        	<div id="video_logo"><img src="./_ Django Intro28_files/play_button.png" alt=""></div> 
+	        	<div class="how_we_did_info"> 
+	            	<span class="title">Wanna see how we did it?</span> 
+	            	<span class="video_time_to_unlock"></span> 
+	        	</div> 
+	    	</div> 
+	     </a>
+	</div>
+
+	<ul id="question_clone">
+		<li class="question"> 
+            <img src="http://learn.codingdojo.com/m/7/3832/29055" alt="profile_picture" class="profile_image"> 
+            <div class="right_question_content"> 
+                <div class="question_block">
+                    <span class="name"></span> 
+                    <span class="date"></span> 
+                    <span class="glyphicon glyphicon-remove pull-right remove_question" id=""></span> 
+                    <p class="main_question"></p> 
+                    <a href="http://learn.codingdojo.com/m/7/3832/29055#" class="add_question_answer" id="">Add answer</a> 
+                    <span class="middle_dot">·</span>
+                    <a href="http://learn.codingdojo.com/m/7/3832/29055#" class="number_of_vote" data-value=""></a> 
+                    <button id="" class="vote_up vote_button" value="1"><span class="glyphicon glyphicon-menu-up" aria-hidden="true"></span></button> 
+                    <button id="" class="vote_down vote_button" value="-1"><span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span></button> 
+                </div>
+                <form class="list-unstyled create_answer_container" id="post_answer" action="http://learn.codingdojo.com/helps/post_answer" method="post"> 
+                    <img src="http://learn.codingdojo.com/m/7/3832/29055" alt="profile_picture" class="profile_image"> 
+                    <div class="create_answer_form"> 
+                        <input type="hidden" name="authenticity_token" value="1MveEg+QQLmQznQYRpkMuq8We3mwXEIm5itZuDeY0Ow=">
+                        <input class="answer_id_input" type="hidden" name="answer[question_id]" value="">
+                        <textarea class="form-control answer_value" name="answer[text_answer]" rows="2" placeholder=""></textarea>
+                        <div class="post_answer_buttons">
+                            <button class="btn btn-default cancel_post_answer">CANCEL</button>
+                            <button class="btn btn-primary post_reply_answer">ANSWER</button>
+                        </div>
+                    </div>
+                </form>
+                <ul class="list-unstyled answers_container">
+                </ul> 
+            </div>
+        </li>
+	</ul>
+
+	<ul id="answer_clone">
+		<li> 
+		    <div class="left_answers_block"> 
+		        <img src="http://learn.codingdojo.com/m/7/3832/29055" alt="profile_picture" class="profile_image"> 
+		    </div> 
+		    <div class="right_answers_block"> 
+		        <span class="name"></span> 
+		        <span class="date"></span> 
+		        <span class="glyphicon glyphicon-remove pull-right remove_answer" id=""></span> 
+		        <p></p> 
+		        <a href="http://learn.codingdojo.com/m/7/3832/29055#" class="number_of_vote" data-value=""></a> 
+		        <button id="" class="vote_up vote_button answer_vote" value="1"><span class="glyphicon glyphicon-menu-up" aria-hidden="true"></span></button> 
+		        <button id="" class="vote_down vote_button answer_vote" value="-1"><span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span></button> 
+		    </div> 
+		</li>
+	</ul>
+</div>
+
+<!-- Html5 Videos speed Clone -->
+<div class="hidden html5_video_speed_clone">
+	<div class="btn-group" role="group" aria-label="..."> 
+		<button type="button" class="btn btn-default reduce_video_speed"> <span class="glyphicon glyphicon-minus"></span> </button> 
+		<button type="button" class="btn btn-default current_speed">1.0</button>
+		<button type="button" class="btn btn-default add_video_speed"> <span class="glyphicon glyphicon-plus"></span> </button>
+	</div>
+</div>
+
+<div id="page_info">
+	<input type="hidden" value="http://learn.codingdojo.com/m/7/3832/29055">
+	<input type="hidden" value="7">
+	<input type="hidden" value="1276">
+	<input type="hidden" value="3832">
+	<input type="hidden" id="module_id_current" value="29055">
+	<input type="hidden" value="107.77.85.130">
+	<input type="hidden" value="16346" id="page_current_user" user="Himanshu Gupta">
+</div>
+
+
+
+
+
+<div class="quiz_result_details_block" id="quiz_result_details" style="display: none;">
+	<div class="quiz_result_user_image">
+		<img src="./_ Django Intro28_files/Microsoft.jpg" alt="Himanshu" class="profile_image">
+	</div>
+	<div class="quiz_result_info">
+		<h3 id="user_name"></h3>
+		<p id="quiz_date"></p>
+	</div>
+	<div class="clear"></div>
+	<p class="quiz_result_score"></p>
+	<div class="quiz_result_content">
+	</div>
+</div>
+		
+
+
+<script>
+	/* for showing of checklist details in chapter module page */
+
+    var checklist_details = JSON.parse('null');
+	
+    if(checklist_details != null){
+
+        if(Object.keys(checklist_details).length > 0){
+            var days = ["", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday"];
+            var level = ["", "Basic", "Intermediate", "Advanced", "Hacker"];
+            var details_to_append = '<ul class="list-inline information_checklist_list">';
+
+            $.each(checklist_details, function(index, value){
+                switch(index){
+                    case 'is_optional':
+                        status = (value == 1) ? "Optional" : "Mandatory";
+                        details_to_append += '<li>'+status+'</li>';
+                        break;
+                    case 'day':
+                        if(value && checklist_details.week != 0){
+                            details_to_append += "<li>Deadline: "+days[value]+" of Week "+checklist_details.week+"</li>"
+                        }
+                        break;
+                    case 'difficulty_level':
+                        if(value != 0 && value != null)
+                        details_to_append += "<li>Difficulty Level: "+level[value]+"</li>";
+                        break;
+                    case 'estimated_time':
+                        if(value != "" && value != null){
+                            details_to_append += "<li>Estimated Time: "+value+"</li>";
+                        }
+                        break;
+                }
+            });
+
+            details_to_append += "</ul>";  
+			$('#assignment-metadata').html(details_to_append)
+        }
+    }
+</script>
+<script type="text/javascript" src="http://learn.codingdojo.com/m/7/3832/29055"></script>
+
+
+
+
+	<!-- Modals -->
+	<!-- Delete Chapter Modal -->
+	<div class="modal fade info_modal delete_chapter_modal" tabindex="-1" role="dialog">
+		<div class="modal-dialog" style="margin-top: 204.6px;">
+			<div class="modal-content">
+				<input type="hidden" name="chapter_id" value="">
+
+				<span class="hide_modal glyphicon glyphicon-remove" data-dismiss="modal" aria-label="Close"></span>
+				<div class="modal_header"><h4>Delete Chapter?</h4></div>
+				<div class="modal_body">
+					<p>Chapter will be permanently deleted. Are you sure?</p>
+					<a href="http://learn.codingdojo.com/m/7/3832/29055#" class="btn btn-default cancel_btn" data-dismiss="modal">CANCEL</a>
+					<a href="http://learn.codingdojo.com/m/7/3832/29055#" class="btn btn-primary confirm_delete_chapter" data-dismiss="modal">DELETE CHAPTER</a>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Delete Module Modal -->
+	<div class="modal fade info_modal delete_module_modal" tabindex="-1" role="dialog">
+		<div class="modal-dialog" style="margin-top: 204.6px;">
+			<div class="modal-content">
+				<input type="hidden" name="module_id" value="">
+
+				<span class="hide_modal glyphicon glyphicon-remove" data-dismiss="modal" aria-label="Close"></span>
+				<div class="modal_header"><h4>Delete Module?</h4></div>
+				<div class="modal_body">
+					<p>Module will be permanently deleted. Are you sure?</p>
+					<a href="http://learn.codingdojo.com/m/7/3832/29055#" class="btn btn-default cancel_btn" data-dismiss="modal">CANCEL</a>
+					<a href="http://learn.codingdojo.com/m/7/3832/29055#" class="btn btn-primary confirm_delete_module" data-dismiss="modal">DELETE MODULE</a>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- chapter_module_modal -->
+	<div class="modal fade info_modal chapter_module_modal" tabindex="-1" role="dialog">
+		<div class="modal-dialog" style="margin-top: 204.6px;">
+			<div class="modal-content">
+				<input type="hidden" name="chapter_id" value="">
+
+				<span class="hide_modal glyphicon glyphicon-remove" data-dismiss="modal" aria-label="Close"></span>
+				<div class="modal_header"><h4>New Chapter</h4></div>
+				<div class="modal_body">
+					<input id="" type="text" placeholder="Chapter Title" value="">
+					<a href="http://learn.codingdojo.com/m/7/3832/29055#" class="btn btn-primary">SAVE</a>
+				</div>
+			</div>
+		</div>
+	</div>	
+
+    <script type="text/javascript">
+        var io = io.connect('https://learn.codingdojo.com:8787', {force_connection: true, path: '/app1socket'});
+        var pair_hangout = false;
+        var admin_as_student = "";
+
+        io.on("error", function(){
+            console.log('Failed connecting to node js server.');
+        });
+
+        if(admin_as_student != "true"){
+            io.on('server:logout', function(){
+                io.emit("student:signout");
+
+                $.ajax({
+                    url: "/before_signout/",
+                    type: "get",
+                    success: function(values) {
+                        if(values.status){
+                            window.location.href = "/signout";
+                        }
+                    }
+                });
+            });
+        }
+
+        $(document).on('ready page:load', function (){
+            io.on('need_signin', function(socket_data) {
+            	io.emit('student:signin', {user_information: {"id":16346,"first_name":"Himanshu","last_name":"Gupta","email":"himanshuguptams@gmail.com","image_url":"https://s3.amazonaws.com/General_V88/boomyeah2015/codingdojo/user16346/profile_pic/Microsoft.jpg?1489619102","created_at":"2017-01-20T17:51:11.000Z","user_level":1,"applicant_id":25922,"is_automated":null,"address":null,"bootcamp_type":1,"bootcamp_date":"April 17, 2017","bootcamp_location":"2","updated_at":"2017-06-19T01:39:07.000Z","last_visited_url":"/m/7/3832/29055","last_used_filter":null,"group_ids":[214,233],"is_course_editor":null}, ip_address: $("#page_info input:nth-child(6)").val(), device: navigator.userAgent}, function(data){
+            		new_track();
+            	});
+            });
+
+            if(admin_as_student != "true"){
+                io.on('server:warning_duplicate_user', function(data){
+                    console.log("warning!!");
+                    io.emit("track:logout_duplicate", data);
+                });
+            }
+
+            function new_track(){
+            	io.emit('track:new', {
+    	        	url: $("#page_info input:nth-child(1)").val(),
+    	        	track_id: $("#page_info input:nth-child(2)").val(),
+    	        	course_id: $("#page_info input:nth-child(3)").val(),
+    	        	chapter_id: $("#page_info input:nth-child(4)").val(),
+    	        	module_id: $("#page_info input:nth-child(5)").val(),
+    	        	ip_address: $("#page_info input:nth-child(6)").val()
+    	        });
+            }
+
+            new_track();
+
+            $("#logout_button").click(function(e){
+                e.preventDefault();
+                e.stopPropagation();
+                io.emit("student:signout");
+                window.location.href = "/signout";
+            });
+
+            io.on("new_chat_message", function(new_message){
+                display_sent_chat_message(new_message);
+            });
+
+            io.on("send_new_message", function(message){
+                display_received_chat_message(message);
+            });
+
+            io.on('make_user_unavailable', function(call_information){
+                make_user_unavailable(call_information);
+            });
+
+            io.on('make_user_available', function(user){
+                make_user_available(user);
+            });
+
+            io.on("invite_student", function(call_information){
+                display_call_request(call_information);
+            });
+        });
+    </script> 
+<div role="log" aria-live="assertive" aria-relevant="additions" class="ui-helper-hidden-accessible"></div></body><span class="gr__tooltip"><span class="gr__tooltip-content"></span><i class="gr__tooltip-logo"></i><span class="gr__triangle"></span></span></html>
