@@ -3,9 +3,10 @@
   <head>
     <meta charset="utf-8">
     <title>notapril</title>
+    {% load staticfiles %}
   </head>
   <body>
-    <h1>Else: notapril</h1>
-    <img src="/static/portfolioapp/images/notapril.jpg" alt="notapril">
+    <h1>{{image}}</h1>
+    <img src="{% static 'portfolioapp/images/' %}{{image}}" alt="notapril">
   </body>
 </html>
