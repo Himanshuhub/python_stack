@@ -1,6 +1,9 @@
 from __future__ import unicode_literals
 
 from django.db import models
+# models is a big object
+# django has ton of tools
+# 
 
 # Create your models here.
 class Product(models.Model):
