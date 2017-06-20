@@ -18,11 +18,28 @@ def show(request, color):
 		'color' : color
 		}
 		return render(request, 'portfolioapp/blue.html', context)
+	elif color == 'orange':
+		context = {
+		'color' : color
+		}
+		return render(request, 'portfolioapp/orange.html', context)
+	elif color == 'red':
+		context = {
+		'color' : color
+		}
+		return render(request, 'portfolioapp/red.html', context)
+	elif color == 'purple':
+		context = {
+		'color' : color
+		}
+		return render(request, 'portfolioapp/purple.html', context)
+
+
 	else:
 		context = {
 		'color' : color
 		}
-		return render(request, 'portfolioapp/blue.html', context)
+		return render(request, 'portfolioapp/notapril.html', context)
 
 
 def aboutme(request):

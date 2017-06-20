@@ -6,5 +6,5 @@ url(r'^ninjas$', views.ninjas),
 url(r'^aboutme$', views.aboutme),
 url(r'^projects$', views.projects),
 url(r'^new_user$', views.create),
-url(r'^ninjas/(?P<color>)$', views.show)
+url(r'^ninjas/(?P<color>[a-z]+)$', views.show)
 ]
