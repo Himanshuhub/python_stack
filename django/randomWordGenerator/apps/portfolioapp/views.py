@@ -10,8 +10,8 @@ from django.template import RequestContext
 
 def index(request):
   # context = {"somekey":get_random_string()}
-  if 'counter' not in request.session:
-	  request.session['counter'] = 1
+  # if 'counter' not in request.session:
+  #  request.session['counter'] = 1
   return render(request,'portfolioapp/index.html')
 
 def create(request):
