@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Document</title>
+  </head>
+  <body>
+    {{request.session.name}}
+    <form class="" action="/new_user" method="post">
+      {% csrf_token %}
+      <input type="text" name="first_name" value="first_name">
+      <input type="submit" name="" value="submit">
+
+    </form>
+  </body>
+</html>
