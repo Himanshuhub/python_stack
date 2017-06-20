@@ -5,12 +5,9 @@
     <title>Document</title>
   </head>
   <body>
-    <h3>The current time and date:</h3>
-    <div class="line">{{request.session.somekey}}
-    </div>
-    <div class="line">{{request.session.count}}
-    </div>
-
+    <h3>Random Word (Attempt# {{request.session.counter}}):
+    <h2>{{request.session.somekey}}</h2>
+    </h3>
       <form class="" action="/create" method="post">
         {% csrf_token %}
       <input type="submit" value="submit">
