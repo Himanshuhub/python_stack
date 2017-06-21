@@ -1,0 +1,11 @@
+{% for blog in blogs %}
+ {{ blog.title }}
+ {{ blog.blog }}
+{% endfor %}
+<form action="/blogs" method="post">
+ {% csrf_token %}
+ Title
+ <input type="text" name="title">
+ <textarea name="blog" rows="8" cols="80"></textarea>
+ <input type="submit" value="Enter Blog">
+</form>
