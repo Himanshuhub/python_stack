@@ -2,7 +2,7 @@ from __future__ import unicode_literals
 
 from django.db import models
 
-class CourseManager(models.Model):
+class CourseManager(models.Manager):
   def addCourse(self, postData):
     create = Course.objects.create(name=postData['name'], description=postDat['description'])
     return add_book, create
