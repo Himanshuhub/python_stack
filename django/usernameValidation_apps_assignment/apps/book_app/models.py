@@ -11,6 +11,10 @@ class UserManager(models.Manager):
       errors.append("username is not long enough, Ouch!!")
     if len(username)>26:
       errors.append("username is too long, Ouch!!")
+    exists = User.objects.filter(username=username).exists
+    if exists:
+        errors.append("Already exists")
+
     if len(errors)==0:
       u = User.objects.create(username=username)
       return [True, u]

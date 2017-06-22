@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Add a student to all bootcamp courses</title>
+    <title>Login & Reg | Home</title>
     {% load staticfiles %}
     <link rel="stylesheet" href="{% static 'css/css.css' %}">
 
@@ -19,9 +19,13 @@
     <h1>Add a new course</h1>
     <form class="" action="/add_username" method="post">
       {% csrf_token %}
-      Username: <input type="text" name="username" value="Username">
+      firstname: <input type="text" name="firstname" value="firstname">
+      lastname: <input type="text" name="lastname" value="lastname">
+      email: <input type="text" name="email" value="email@email.com">
+      password: <input type="password" name="password" value="password">
+      Confirm password: <input type="password" name="confirm_pw" value="password">
+      birthday: <input type="text" name="birthday" value="birthday">
       <input type="submit" name="submit" value="Submit">
-      <!-- <i></i> -->
     </form>
     </table>
   </body>
