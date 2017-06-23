@@ -45,11 +45,11 @@ class UserManager(models.Manager):
     if exists:
       errors.append("email exists, Ouch!!")
     if len(errors)==0:
-      u = User.objects.delete()
-      # u = User.objects.create(firstname=firstname, lastname=lastname, email=email, password=password, birthday=birthday)
+      u = User.objects.create(firstname=firstname, lastname=lastname, email=email, password=password, birthday=birthday)
       return [True, u]
     else:
       return [False, errors]
+    instance = User.objects.get(firstname=firstname, lastname=lastname, email=email, password=password, birthday=birthday)
 
 class User(models.Model):
   firstname = models.CharField(max_length=300, blank=True, null=True)
