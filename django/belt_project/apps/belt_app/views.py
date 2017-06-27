@@ -1,7 +1,6 @@
 from django.shortcuts import render, redirect, HttpResponse
-from .models import User
-from .models import Comment
-from IPython import embed
+from .models import User, Comment
+# from IPython import embed
 import datetime
 from django.contrib import messages
 
